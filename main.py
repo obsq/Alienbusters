@@ -24,7 +24,7 @@ background = pygame.image.load("E:\packground.png")
 mixer.music.load("E:\packground.wav")
 mixer.music.play(-1)
 
-pygame.display.set_caption("spacex")
+pygame.display.set_caption("Alienbusters")
 
 score_value = 0
 font = pygame.font.Font('freesansbold.ttf', 32)
