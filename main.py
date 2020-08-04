@@ -1,3 +1,5 @@
+#  Alienbusters
+
 # made with python 3.7.3
 # PyCharm 2018.3.1
 # coded on 11.07.2020
@@ -25,14 +27,10 @@ mixer.music.play(-1)
 pygame.display.set_caption("spacex")
 
 score_value = 0
-high_score_value = 0
 font = pygame.font.Font('freesansbold.ttf', 32)
 
 stextx = 10
 stexty = 10
-
-hstextx = 170
-hstexty = 10
 
 # Game Over
 over_font = pygame.font.Font('freesansbold.ttf', 64)
@@ -42,9 +40,6 @@ def show_score(x, y):
     score = font.render("Score : " + str(score_value), True, (255, 255, 255))
     screen.blit(score, (x, y))
 
-def show_high_score(x, y):
-    high_score = font.render("High Score : " + str(high_score_value), True, (255, 255, 255))
-    screen.blit(high_score, (x, y))
 
 playerimg = pygame.image.load("E:\player.png")
 playerx = 370
@@ -170,9 +165,7 @@ while running:
     if bullet_state == "fire":
         fire_bullet(bulletx, bullety)
         bullety -= bullety_change
-
-    if score_value >= high_score_value:
-        high_score_value = score_value
+        
 
     player(playerx, playery)
     show_score(stextx, stexty)
